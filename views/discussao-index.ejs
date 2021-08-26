@@ -1,0 +1,20 @@
+<%- include ("./partials/website/header.ejs") %>
+<body style="overflow: visible;">
+<% discussaos1.reverse().forEach(function(discusao){ %>
+    <div class="card" id="index-card">
+        <div class="card-body">
+            <h5><%=discusao.titulo%></h5>
+        </div>
+        <div class="card-footer">
+            <p style="float:left"><%=discusao.opiniao%></p>
+            <small style="float:right"><ul><li><%=discusao.materia%></li></ul></small>
+            <br>
+            <br>
+            <button style="float:left"class="btn btn-warning">Interrogar</button>
+        </div>
+    </div>
+    <% }) %>
+
+</div>
+</body>
+<%- include ("./partials/website/footer.ejs") %>

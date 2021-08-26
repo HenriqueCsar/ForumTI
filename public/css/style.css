@@ -1,0 +1,78 @@
+.container{
+    display:flex;
+    margin-top:6vh;
+
+}
+
+.card-body small{
+    float:right;
+}
+
+h5, p, label, small{
+    color:#f1f1f1;
+}
+
+
+
+.card{
+    background-color: #292f3b;
+}
+
+body{
+    overflow:hidden;
+    background-color:#232833;
+;
+}
+
+#logo{
+    font-weight: bold;
+    text-shadow: 1px 1px 5px #eceff1;
+}
+
+.meio, .direita, .esquerda{
+    border-radius:6px;
+    box-shadow:1px 1px 4px black;
+}
+
+
+.meio{
+    width:30%;
+    align-items: center;
+    display:inline-block;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.box{
+    width:400px;
+    height:500px;
+    align-items: flex-start;
+    display:inline-block;
+}
+
+.posts{
+    max-width:500px;
+}
+
+#discussoes-atuais{
+    margin-top:2vh;
+}
+
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+}
+
+#index-card{
+    box-shadow:1px 1px 4px black;
+    margin:2vh;
+}
+
+iframe{
+    width:50%;
+    outline:none;
+    border:none;
+    height:100vh;
+    overflow:scroll;
+}

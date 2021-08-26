@@ -1,0 +1,67 @@
+<%- include ("./partials/website/header.ejs") %>
+<body>
+<%- include ("./partials/website/navbar.ejs") %>
+
+    <div class="container">
+        <div class="esquerda">
+            <div class="box">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Posts</h5>
+                    </div>
+                    <div class="card-body">
+                </div>
+
+                <% discussaos.forEach(function(discusao) { %>
+                <div class="card" id="discussoes-atuais">
+                    <div class="card-body">
+                        <p><%= discusao.titulo %></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-warning">Interessante</button>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="meio">
+        <div class="card">
+            <div class="card-header">
+                <h5> Começar uma discussão </h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/abrirdiscussao">
+                <label>Título</label>
+                <input class="form-control" type="text" placeholder="Título da discussão" name="titulo">
+                <label>Matéria: </label>
+                <select class="form-control form-control-sm" class="form-control" name="materia">
+                    <option>Matemática</option>
+                    <option>Computação</option>
+                    <option>Técnologia</option>
+                    <option>Teorias</option>
+                    <option>Matemática</option>
+                  </select>
+                  <label>Opinião</label>
+                  <textarea class="form-control" placeholder="Descreva sua opinião" name="opiniao"></textarea>
+                  <br>
+                  <button class="btn btn-warning">Discutir</button>
+
+                </form>
+            </div>
+        </div>
+        </div>
+        <%- include ("./partials/atualidades/card-header.ejs") %>
+                    <a href="/erro" ><b>WINDOWS 11 VAZADO !</b></a> <small>Postado: 10:47</small>
+                    <hr>
+                    <img src="https://img1.ibxk.com.br//2021/06/18/18190233440419.jpg?w=532&h=336&mode=crop&scale=both" width="400px" style="border-radius: 6px;">
+                    <br>
+                    <br>
+                    <a class="btn btn-dark" href="https://www.tecmundo.com.br/tecnologia"><b> Mais sobre </b></a>
+        <%- include ("./partials/atualidades/card-footer.ejs") %>
+        </div>
+    </div>
+</body>
+<%- include ("./partials/website/footer.ejs") %>
